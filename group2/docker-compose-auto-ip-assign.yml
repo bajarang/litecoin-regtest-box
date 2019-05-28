@@ -1,0 +1,85 @@
+version: '3'
+services:
+  node1:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 80:12345
+  node2:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node3:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 80:12345
+  node4:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node5:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node6:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node7:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node8:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node9:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+  node10:
+    build: .
+    command: litecoind -regtest -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/  
+    #command: litecoind -regtest -server -rpcuser=rpc -rpcpassword=x -rpcport=10340 -datadir=/root/litecoind-simnet/ -conf=/root/litecoind-simnet/litecoin.conf 
+    networks:
+      vpcbr:
+    ports:
+      - 81:12345
+networks:
+  vpcbr:
+    driver: bridge

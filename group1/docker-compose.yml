@@ -1,0 +1,108 @@
+version: '3'
+services:
+  node1:
+    build: .
+    cap_add:
+      - ALL
+    command: python3 -m http.server
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.11
+    ports:
+      - 80:12345
+  node2:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.11:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.2
+    ports:
+      - 81:12345
+  node3:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.3
+    ports:
+      - 82:12345
+  node4:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.4
+    ports:
+      - 83:12345
+  node5:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.5
+    ports:
+      - 84:12345
+  node6:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.6
+    ports:
+      - 85:12345
+  node7:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.7
+    ports:
+      - 86:12345
+  node8:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.8
+    ports:
+      - 87:12345
+  node9:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.11:12345 -addnode=10.8.0.10:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.9
+    ports:
+      - 88:12345
+  node10:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.8.0.2:12345 -addnode=10.8.0.3:12345 -addnode=10.8.0.4:12345 -addnode=10.8.0.5:12345 -addnode=10.8.0.6:12345 -addnode=10.8.0.7:12345 -addnode=10.8.0.8:12345 -addnode=10.8.0.9:12345 -addnode=10.8.0.11:12345 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.8.0.10
+    ports:
+      - 89:12345
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.8.0.0/16

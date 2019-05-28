@@ -1,0 +1,109 @@
+version: '3'
+services:
+  node1:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    #command: litecoind -regtest -server -addnode=10.9.0.2:12345 -addnode=10.9.0.3:12345 -addnode=10.9.0.4:12345 -addnode=10.9.0.5:12345 -addnode=10.9.0.6:12345 -addnode=10.9.0.7:12345 -addnode=10.9.0.8:12345 -addnode=10.9.0.9:12345 -addnode=10.9.0.10:12345 -addnode=10.130.170.171:80 -rpcuser=rpc -rpcpassword=x -rpcport=10340  --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.11
+    ports:
+      - 90:12345
+  node2:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.2
+    ports:
+      - 91:12345
+  node3:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.3
+    ports:
+      - 92:12345
+  node4:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.4
+    ports:
+      - 93:12345
+  node5:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.5
+    ports:
+      - 94:12345
+  node6:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.6
+    ports:
+      - 95:12345
+  node7:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.7
+    ports:
+      - 96:12345
+  node8:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.8
+    ports:
+      - 97:12345
+  node9:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.9
+    ports:
+      - 98:12345
+  node10:
+    build: .
+    cap_add:
+      - ALL
+    command: litecoind -regtest -server -addnode=10.130.170.171:80 -addnode=10.130.170.171:81 -addnode=10.130.170.171:82 -addnode=10.130.170.171:83 -addnode=10.130.170.171:84 -addnode=10.130.170.171:85 -addnode=10.130.170.171:86 -addnode=10.130.170.171:87 -addnode=10.130.170.171:88 -addnode=10.130.170.171:89 -rpcuser=rpc -rpcpassword=x -rpcport=10340 --datadir=/root/litecoind-simnet/ -port=12345
+    networks:
+      vpcbr:
+        ipv4_address: 10.9.0.10
+    ports:
+      - 99:12345
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.9.0.0/16
